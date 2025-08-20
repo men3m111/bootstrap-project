@@ -13,6 +13,24 @@
         header {
             background-color: #F5F7FA;
         }
+        header nav a {
+            transition: 0.3s !important;
+        }
+        header nav a:hover {
+            color: #4CAF4F !important;
+        }
+        .signup:hover,
+        .join:hover,
+        .learn:hover,
+        .demo:hover {
+            transition: 0.3s;
+            border: #4CAF4F 1px solid !important;
+            color: #4CAF4F !important;
+            background-color: #fff !important;
+        }
+        .signup:hover a {
+            color: #4CAF4F !important;
+        }
         nav a {
             color: #000 !important
         }
@@ -53,6 +71,115 @@
           border-top: 2px solid #000 !important;
           border-bottom: 2px solid #000 !important;
         }
+        .meet, .read, .meet i, .read i {
+            transition: 0.3s;
+        }
+        .meet:hover i,
+        .read:hover i{
+            transform: translateX(20px) !important;
+            /* transition: 0.3s; */
+        }
+        .meet:hover,
+        .read:hover {
+            transform: translateX(10px) !important;
+            /* transition: 0.3s ease-in-out; */
+        }
+        .footer-input::placeholder {
+            color: #D9DBE1;
+            
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        footer a:hover {
+            color: #4CAF4F;
+        }
+        .insta:hover {
+            transition: 0.3s;
+            color: #E4405F;
+            background-color: #fff !important;
+        }
+        .face:hover {
+            transition: 0.3s;
+            color: #1877F3;
+            background-color: #fff !important;
+        }
+        .twit:hover {
+            transition: 0.3s;
+            color: #fff !important;
+            background-color: #000 !important;
+        }
+        .linked:hover {
+            transition: 0.3s;
+            color: #0A66C2;
+            background-color: #fff !important;
+        }
+        @media (max-width: 1200px) {
+            .my-card-con {
+                width: 85% !important;
+                right: 22px !important;
+            }
+        }
+        @media (max-width: 995px) {
+            .card-parent {
+                display: flex;
+            }
+            .my-card-con {
+                top: 150px !important;
+                left: 15px !important;
+            }
+            .readmore {
+                margin-left: -30px !important;
+            }
+            footer form .fa-paper-plane {
+                right: 0px !important;
+            }
+            .button-footer {
+                width: 200px;
+            }
+            .my-footer div {
+                margin-right: 20px !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .manage-cards {
+                margin-top: 30px;
+            }
+            .my-card img{
+                width: 170px !important;
+            }
+            .my-card-con {
+                top: 120px !important;
+                left: 7px !important;
+                width: 110% !important;
+            }
+            .readmore {
+                margin-left: -50px !important;
+            }
+            footer {
+                gap: 20px !important;
+            }
+            .my-footer {
+                transform: translateX(-60px);
+            }
+            footer form {
+                right: 0 !important;
+            }
+        }
+        @media (max-width: 566px) {
+            .caring {
+                transform: translateY(-30px);
+            }
+            .card-parent {
+                transform: translateY(-50px);
+            }
+            .readmore {
+                margin-left: -10px !important;
+            }
+            
+        }
     </style>
 </head>
 
@@ -90,7 +217,7 @@
                         <button type="button" class="btn login"><a class="nav-link" aria-current="page" href="#">Login</a></button>                        
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="btn btn-success"><a class="nav-link" aria-current="page" href="#">Sign up</a></button>                        
+                        <button type="button" class="btn btn-success signup"><a class="nav-link" aria-current="page" href="#">Sign up</a></button>
 
                     </li>
                 </ul>
@@ -98,74 +225,74 @@
             </div>
         </nav>
 
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active sliding" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="sliding"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="sliding"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <div class="container py-5" style="min-height: 89vh;">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1 class="fw-bold">
-                        Learn with Experts <br>
-                        <span class="highlight">from all over</span>
-                    </h1>
-                <p class="text-muted">Get the latest tips from top photographers worldwide.</p>
-                <button class="btn btn-success register-btn px-4 py-2">Join Now</button>
+        <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active sliding" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="sliding"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="sliding"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container py-5" style="min-height: 89vh;">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h1 class="fw-bold">
+                                Learn with Experts <br>
+                                <span class="highlight">from all over</span>
+                            </h1>
+                        <p class="text-muted">Get the latest tips from top photographers worldwide.</p>
+                        <button class="btn btn-success register-btn px-4 py-2 join">Join Now</button>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./Images/Illustration.png" alt="Illustration">
+                    </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="./Images/Illustration.png" alt="Illustration">
+            <div class="carousel-item">
+            <div class="container py-5" style="min-height: 89vh;">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h1 class="fw-bold">
+                                Learn with Experts <br>
+                                <span class="highlight">from all over</span>
+                            </h1>
+                        <p class="text-muted">Get the latest tips from top photographers worldwide.</p>
+                        <button class="btn btn-success register-btn px-4 py-2 join">Join Now</button>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./Images/Illustration.png" alt="Illustration">
+                    </div>
+                    </div>
+                </div>
             </div>
+            <div class="carousel-item">
+            <div class="container py-5" style="min-height: 89vh;">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h1 class="fw-bold">
+                                Learn with Experts <br>
+                                <span class="highlight">from all over</span>
+                            </h1>
+                        <p class="text-muted">Get the latest tips from top photographers worldwide.</p>
+                        <button class="btn btn-success register-btn px-4 py-2 join">Join Now</button>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="./Images/Illustration.png" alt="Illustration">
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="carousel-item">
-      <div class="container py-5" style="min-height: 89vh;">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1 class="fw-bold">
-                        Learn with Experts <br>
-                        <span class="highlight">from all over</span>
-                    </h1>
-                <p class="text-muted">Get the latest tips from top photographers worldwide.</p>
-                <button class="btn btn-success register-btn px-4 py-2">Join Now</button>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="./Images/Illustration.png" alt="Illustration">
-            </div>
-            </div>
+        <button class="carousel-control-prev" id="next-slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon " style="color-scheme: black;" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" id="previous-slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon " style="color-scheme: black;" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
-    </div>
-    <div class="carousel-item">
-      <div class="container py-5" style="min-height: 89vh;">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1 class="fw-bold">
-                        Learn with Experts <br>
-                        <span class="highlight">from all over</span>
-                    </h1>
-                <p class="text-muted">Get the latest tips from top photographers worldwide.</p>
-                <button class="btn btn-success register-btn px-4 py-2">Join Now</button>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="./Images/Illustration.png" alt="Illustration">
-            </div>
-            </div>
-        </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" id="next-slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon " style="color-scheme: black;" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" id="previous-slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon " style="color-scheme: black;" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
     </header>
     <section class="mt-5 min-vw-100" style="height: 690px;">
         <section>
@@ -188,7 +315,7 @@
                 <h1>Manage your entire community<br>in a single system</h1>
                 <p class="text-secondary">Who is Nextcent suitable for?</p>
             </div>
-            <div class="d-flex justify-content-between w-75 mx-auto text-center" >
+            <div class="manage-cards d-flex justify-content-between mx-auto text-center container h-100" >
                 <div class="card justify-content-center align-items-center p-3 border border-0" style="width: 300px; height: 260px;">
                     <img src="./Images/Icon.png" alt="" height="55" width="55" class="mb-2">
                     <h2 style="color: #4D4D4D;" class="fw-bold">Membership Organisations</h2>
@@ -207,16 +334,16 @@
             </div>
         </section>
     </section>
-    <section class="d-flex container">
+    <section class="d-flex container flex-lg-row flex-column">
         <div><img src="./Images/Frame 35.png" alt=""></div>
         <div class="d-flex flex-column align-self-center">
             <h2 class="mb-4">The unseen of spending three<br>years at Pixelgrade</h2>
             <p class="mb-4 w-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.</p>
-            <button style="width: 120px;" class="p-2 bg-success text-light border border-0 rounded">Learn More</button>
+            <button style="width: 120px;" class="p-2 bg-success text-light border border-0 rounded learn">Learn More</button>
         </div>
     </section>
-    <section class="container-fluid" style="height: 288px; background-color: #F5F7FA;">
-        <div class="container d-flex justify-content-between p-5 align-items-center">
+    <section class="container-fluid align-content-center" style="height: 288px; background-color: #F5F7FA;">
+        <div class="container d-flex justify-content-between p-3 align-items-center flex-md-row flex-column">
             <div>
                 <h2>Helping a local<br><span class="text-success">business reinvent itself</span></h2>
                 <p>We reached here with our hard work and dedication</p>
@@ -226,30 +353,30 @@
                     <div class="d-flex gap-2">
                         <img src="./Images/helping Icon1.png" alt="" width="50" height="50">
                         <div class="text-center">
-                            <h3>2,245,341</h3>
+                            <h3 class="counter" data-target = "2245341">0</h3>
                             <p>Members</p>
                         </div>
                     </div>
                     <div class="d-flex gap-2">
                         <img src="./Images/helping Icon3.png" alt="" width="50" height="50">
                         <div class="text-center">
-                            <h3>46,328</h3>
+                            <h3 class="counter-two" data-target = "46328">0</h3>
                             <p>Clubs</p>
                         </div>
                     </div>
                 </div>
-                <div class="d-flex gap-5">
+                <div class="d-flex gap-5 mt-3">
                     <div class="d-flex gap-2">
                         <img src="./Images/helping Icon2.png" alt="" width="50" height="50">
                         <div class="text-center">
-                            <h3>828,867</h3>
+                            <h3 class="counter-three" data-target="828867">0</h3>
                             <p>Event Bookings</p>
                         </div>
                     </div>
                     <div class="d-flex gap-2">
                         <img src="./Images/helping Icon4.png" alt="" width="50" height="50">
                         <div class="text-center">
-                            <h3>1,926,436</h3>
+                            <h3 class="counter-four" data-target="1926436">0</h3>
                             <p>Payments</p>
                         </div>
                     </div>
@@ -257,27 +384,27 @@
             </div>
         </div>
     </section>
-    <section class="container-fluid mt-5">
-        <div class="container d-flex justify-content-between align-items-center gap-5">
-            <div><img src="./Images/pana.png" alt="" width="400px" height="400px"></div>
+    <section class="container-fluid mt-5 ">
+        <div class="container d-flex justify-content-between align-items-center gap-5 container-sm flex-md-row flex-column">
+            <div><img src="./Images/pana.png" alt="" width="400px" height="400px" class="img-fluid mw-50"></div>
             <div class="d-flex flex-column w-50">
                 <h2>How to design your site footer like we did</h2>
                 <p>Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
-                <button style="width: 120px;" class="p-2 bg-success text-light border border-0 rounded">Learn More</button>
+                <button style="width: 120px;" class="learn p-2 bg-success text-light border border-0 rounded">Learn More</button>
             </div>
         </div>
     </section>
     <section class="container-fluid mt-5 py-5" style="background-color: #F5F7FA;">
-        <div class="container offset-1 d-flex align-items-center justify-content-evenly">
+        <div class="container d-flex align-items-center justify-content-evenly flex-md-row flex-column">
             <div><img src="./Images/image 9.png" alt="" width="350" height="350"></div>
-            <div class="d-flex flex-column w-50">
+            <div class="d-flex flex-column w-75">
                 <div>
-                    <p>Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
+                    <p style="width: 85%;">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
                     <h5 class="text-success">Tim Smith</h5>
                     <p class="text-secondary">British Dragon Boat Racing Association</p>
                 </div>
-                <div class="d-flex gap-3">
-                    <div class="d-flex w-75 justify-content-between me-4">
+                <div class="d-flex gap-3 ">
+                    <div class="d-flex w-50 justify-content-between me-4">
                         <img src="./Images/Logo6.png" alt="" width="30" height="30">
                         <img src="./Images/Logo (1).png" alt="" width="30" height="30">
                         <img src="./Images/Logo (2).png" alt="" width="30" height="30">
@@ -285,43 +412,43 @@
                         <img src="./Images/Logo (4).png" alt="" width="30" height="30">
                         <img src="./Images/Logo (5).png" alt="" width="30" height="30">
                     </div>
-                    <div class="d-flex text-success align-items-center justify-content-between" style="width: 200px;">
-                        <span><a href="" class="text-success" style="text-decoration: none;">Meet all customers</a></span><i class="fa-solid fa-arrow-right"></i>
+                    <div class="d-flex text-success align-items-center" style="width: 100px;">
+                        <span class="meet d-flex align-items-center"><a href="" class="text-success meet" style="text-decoration: none;">Meet all customers</a><i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="container-fluid mt-5" style="height: 508px;">
-        <div class="text-center mx-auto">
+    <section class="container-fluid mt-5 min-vh-100">
+        <div class="text-center mx-auto caring">
             <h2>Caring is the new marketing</h2>
-            <p class=" offset-3 mt-3" style="width: 628px;">The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
+            <p class=" mx-auto mt-3 w-50" style="width: fit-content;">The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
         </div>
-        <div class="d-flex gap-5 container">
-            <div class="card position-relative rounded-5 border border-0" style="width: 368px; height: 230px;">
+        <div class="card-parent d-flex gap-5 container flex-md-row">
+            <div class="my-card card position-relative rounded-5 border border-0 " style="width: 30%; height: 230px;">
                 <img src="./Images/image 18.png" alt="" style="top: 30px;" class="w-100 position-absolute">
-                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="rounded position-absolute top-100 p-3 text-center">
+                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="my-card-con rounded position-absolute top-100 p-3 text-center">
                     <h5>Creating Streamlined Safeguarding Processes with OneRen</h5>
                     <div class="d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
-                        <span><a href="" class="text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a></span><i class="fa-solid fa-arrow-right"></i>
+                        <span class="read"><a href="#" class="readmore text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a><i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
-            <div class="card position-relative rounded-5 border border-0" style="width: 368px; height: 230px;">
+            <div class="my-card card position-relative rounded-5 border border-0" style="width: 30%; height: 230px;">
                 <img src="./Images/image 19.png" alt="" style="top: 30px;" class="w-100 position-absolute">
-                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="rounded position-absolute top-100 p-3 text-center">
+                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="my-card-con rounded position-absolute top-100 p-3 text-center">
                     <h5>What are your safeguarding responsibilities and how can you manage them?</h5>
                     <div class="d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
-                        <span><a href="" class="text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a></span><i class="fa-solid fa-arrow-right"></i>
+                        <span class="read"><a href="#" class="readmore text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a><i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
-            <div class="card position-relative rounded-5 border border-0" style="width: 368px; height: 230px;">
+            <div class="my-card card position-relative rounded-5 border border-0" style="width: 30%; height: 230px;">
                 <img src="./Images/image 20.png" alt="" style="top: 30px;" class="w-100 position-absolute">
-                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="rounded position-absolute top-100 p-3 text-center">
+                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="my-card-con rounded position-absolute top-100 p-3 text-center">
                     <h5>Revamping the Membership Model with Triathlon Australia</h5>
                     <div class="d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
-                        <span><a href="" class="text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a></span><i class="fa-solid fa-arrow-right"></i>
+                        <spa class="read"><a href="#" class="readmore text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a><i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
@@ -330,11 +457,54 @@
     <section class="container-fluid p-5" style="background-color: #F5F7FA;">
         <div class="container text-center">
             <h2 class="w-50 fs-1 offset-3 fw-bold lh-be mb-5">Pellentesque suscipit fringilla libero eu.</h2>
-            <button style="width: 120px;" class="p-2 bg-success text-light border border-0 rounded">Learn More</button>
+            <button style="width: 150px;" class="p-2 bg-success text-light border border-0 rounded demo">Get a Demo<i class="fa-solid fa-arrow-right mx-2"></i></button>
         </div>
     </section>
+    <footer style="background-color: #263238; height: max-content;"  class=" container-fluid text-light p-5">
+        <div class="my-footer container row justify-content-between mx-auto rwo w-100 gap-5">
+            <div class="col-lg-3 col-sm-2 content-foot mx-5">
+                <div class="d-flex mb-4">
+                    <img src="./Images/footer-icon.png" alt="" height="30px" style="margin-right: 15px;">
+                    <h3 class="fw-bold">Nexcent</h3>
+                </div>
+                <div class="mb-4">
+                    <p style="color: #D9D9D9;">Copyright &copy; 2020 Nexcent ltd.</p>
+                    <p style="margin-top: -15px; color: #D9D9D9 ;">All rights reserved</p>
+                </div>
+                <div class="d-flex justify-content-evenly" style="transform: translateX(-24px);">
+                    <div class="insta border-radius border-0 rounded-circle p-2 border" style="background-color: #494e53; cursor: pointer;"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="face border-radius border-0 rounded-circle p-2 border" style="background-color: #494e53; cursor: pointer;"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="twit border-radius border-0 rounded-circle p-2 border" style="background-color: #494e53; cursor: pointer;"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="linked border-radius border-0 rounded-circle p-2 border" style="background-color: #494e53; cursor: pointer;"><i class="fa-brands fa-linkedin"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-1 d-flex flex-column content-foot">
+                <h3>Company</h3>
+                <p><a href=""> About us</a></p>
+                <p><a href=""> Blog</a></p>
+                <p><a href=""> Contact us</a></p>
+                <p><a href=""> Pricing</a></p>
+                <p><a href=""> Testimonials</a></p>
+            </div>
+            <div class="col-lg-2 col-sm-1 content-foot">
+                <h3>Support</h3>
+                <p><a href="">Help center</a></p>
+                <p><a href="">Terms of service</a></p>
+                <p><a href="">Legal</a></p>
+                <p><a href="">Privacy policy</a></p>
+                <p><a href="">Status</a></p>
+            </div>
+            <div class="col-lg-2 col-sm-1 button-footer">
+                <h3>Stay up to date</h3>
+                <form class=" d-flex position-relative">
+                    <input class="footer-input p-1" type="email" placeholder="Your email address" style="background-color: #aeaeb3;"><i class="fa-solid fa-paper-plane" style="position: absolute; right: -30px; top: 10px; cursor: pointer;"></i>
+                </form>
+            </div>
+        </div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    </script>
 </body>
 </html>
