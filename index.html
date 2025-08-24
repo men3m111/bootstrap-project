@@ -40,12 +40,6 @@
         .right-btns .login a {
             color: #4CAF4F !important;
         }
-        /* .carousel-indicators [data-bs-target]{
-            width: 10px !important;
-            height: 10px !important;
-            border-radius: 50% !important;
-            background-color: #28a745 !important;
-        } */
         .carousel-control-next,
         .carousel-control-prev {
             height: 50px !important;
@@ -77,12 +71,10 @@
         .meet:hover i,
         .read:hover i{
             transform: translateX(20px) !important;
-            /* transition: 0.3s; */
         }
         .meet:hover,
         .read:hover {
             transform: translateX(10px) !important;
-            /* transition: 0.3s ease-in-out; */
         }
         .footer-input::placeholder {
             color: #D9DBE1;
@@ -127,8 +119,8 @@
                 display: flex;
             }
             .my-card-con {
-                top: 150px !important;
-                left: 15px !important;
+                width: 100%;
+                top: 50% !important;
             }
             .readmore {
                 margin-left: -30px !important;
@@ -142,18 +134,67 @@
             .my-footer div {
                 margin-right: 20px !important;
             }
-        }
-        @media (max-width: 768px) {
-            .manage-cards {
-                margin-top: 30px;
+            .log-img {
+                
+                transform: translate(0px, 100px);
+                margin-bottom: 50px;
             }
-            .my-card img{
-                width: 170px !important;
+            .log-img img {
+                width: 150px !important;
+            }
+        }
+        @media (max-width: 764px) {
+            .cards-sec {
+                margin-bottom: 50px !important;
+            }
+            .manage-cards {
+                height: 75% !important;
+                width: 100%;
+                margin: 0 !important;
+            }
+            .manage-cards .card{
+                margin-right: 10px !important;
+                align-items: center !important;
+                height: 50% !important;
+                flex-direction: column !important;
+                margin-bottom: 0 !important;
+                width: 30% !important   ;
+            }
+            
+            .card-parent {
+                /* width: 100% !important; */
+                display: flex;
+                flex-direction: column !important;
+                transform: translateY(-20px);
+            }
+            
+            .card-parent .card {
+                width: 75% !important;
+                display: flex !important;
+                margin: 0 auto 50px 80px !important;
+                flex-direction: row !important;
             }
             .my-card-con {
-                top: 120px !important;
-                left: 7px !important;
-                width: 110% !important;
+                top: 250px !important;
+                left: 35px !important;
+            }
+            .log-img {
+                transform: translate(0px, 100px);
+                margin-bottom: 50px;
+            }
+            .log-sec {
+                margin-top: -50px !important;
+                
+            }
+            .log-sec + section {
+                margin-top: 10px;
+                height: 100% !important;
+            }
+            .log-sec-second {
+                margin-top: 50px;
+            }
+            .my-card img{
+                width: 350px !important;
             }
             .readmore {
                 margin-left: -50px !important;
@@ -178,7 +219,112 @@
             .readmore {
                 margin-left: -10px !important;
             }
-            
+        }
+        @media (max-width: 510px) {
+            .manage-cards {
+                flex-direction: column !important;
+                margin: 0 auto !important;
+                width: 100% !important;
+            }
+            .manage-cards .card{
+                flex-direction: row !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .manage-cards .card {
+                gap: 15px !important;
+            }
+            .manage-cards .card h2{
+                font-size: 18px;
+            }
+            .manage-cards .card p {
+                font-size: 14px;
+            }
+            .card {
+                width: 70% !important;
+                display: flex !important;
+                flex-direction: row !important;
+                margin-left: 70px !important;
+            }
+            .my-card img{
+                width: 250px !important;
+            }
+            .my-card-con {
+                top: 170px !important;
+                left: 25px !important;
+            }
+        }
+        @media (max-width: 408px) {
+            .manage-cards .card {
+                gap: 10px !important;
+            }
+            .manage-cards .card h2{
+                font-size: 15px;
+            }
+            .manage-cards .card p {
+                font-size: 12px;
+            }
+            .card {
+                width: 70% !important;
+                display: flex !important;
+                flex-direction: row !important;
+                margin-left: 50px !important;
+            }
+            .my-card img{
+                width: 240px !important;
+            }
+            .my-card:nth-child(1) img {
+                width: 300px !important;
+            }
+            .my-card-con {
+                top: 150px !important;
+                left: 30px !important;
+            }
+        }
+        @media (max-width: 408px) {
+            .manage-cards .card {
+                gap: 10px !important;
+            }
+            .manage-cards .card h2{
+                font-size: 15px;
+            }
+            .manage-cards .card p {
+                font-size: 12px;
+            }
+            .my-card img{
+                width: 223px !important;
+            }
+            .my-card:nth-child(1) img {
+                width: 250px !important;
+            }
+            .my-card-con .readmore,
+            .my-card-con .readmore + i{
+                font-size: 12px !important;
+            }
+            .readmorediv {
+                padding-right: 40px !important;
+            }
+        }
+        @media (max-width: 350px) {
+
+        }
+        @media (max-width: 378px) {
+            .manage-cards .card {
+                gap: 6px !important;
+            }
+            .manage-cards .card h2{
+                font-size: 14px;
+            }
+            .manage-cards .card p {
+                font-size: 10px;
+            }
+        }
+        @media (max-width: 320px) {
+            .my-card img{
+                width: 180px !important;
+            }
         }
     </style>
 </head>
@@ -294,7 +440,7 @@
         </button>
         </div>
     </header>
-    <section class="mt-5 min-vw-100" style="height: 690px;">
+    <section class="mt-5 " style="height: 690px;">
         <section>
             <div class="text-center mb-5">
             <h1>Our Clients</h1>
@@ -310,12 +456,12 @@
             <img src="./Images/Logo (2).png"  alt="" height="27" width="30">
             </div>
         </section>
-        <section class="mt-5 min-vw-100">
+        <section class="mt-5">
             <div class="text-center">
                 <h1>Manage your entire community<br>in a single system</h1>
                 <p class="text-secondary">Who is Nextcent suitable for?</p>
             </div>
-            <div class="manage-cards d-flex justify-content-between mx-auto text-center container h-100" >
+            <div class="manage-cards d-flex flex-wrap justify-content-between mx-auto text-center container-md h-100" >
                 <div class="card justify-content-center align-items-center p-3 border border-0" style="width: 300px; height: 260px;">
                     <img src="./Images/Icon.png" alt="" height="55" width="55" class="mb-2">
                     <h2 style="color: #4D4D4D;" class="fw-bold">Membership Organisations</h2>
@@ -334,9 +480,9 @@
             </div>
         </section>
     </section>
-    <section class="d-flex container flex-lg-row flex-column">
-        <div><img src="./Images/Frame 35.png" alt=""></div>
-        <div class="d-flex flex-column align-self-center">
+    <section class="d-flex container flex-lg-row flex-column log-img log-sec">
+        <div class="mx-auto "><img src="./Images/Frame 35.png" alt=""></div>
+        <div class="d-flex flex-column align-self-center log-sec-second">
             <h2 class="mb-4">The unseen of spending three<br>years at Pixelgrade</h2>
             <p class="mb-4 w-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.</p>
             <button style="width: 120px;" class="p-2 bg-success text-light border border-0 rounded learn">Learn More</button>
@@ -419,35 +565,35 @@
             </div>
         </div>
     </section>
-    <section class="container-fluid mt-5 min-vh-100">
+    <section class="container-fluid mt-5 min-vh-100 cards-sec">
         <div class="text-center mx-auto caring">
             <h2>Caring is the new marketing</h2>
             <p class=" mx-auto mt-3 w-50" style="width: fit-content;">The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
         </div>
         <div class="card-parent d-flex gap-5 container flex-md-row">
-            <div class="my-card card position-relative rounded-5 border border-0 " style="width: 30%; height: 230px;">
+            <div class="my-card card position-relative rounded-5 border border-0 col-md-4 row justify-content-between" style="height: 230px;  width: 30%;">
                 <img src="./Images/image 18.png" alt="" style="top: 30px;" class="w-100 position-absolute">
-                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="my-card-con rounded position-absolute top-100 p-3 text-center">
-                    <h5>Creating Streamlined Safeguarding Processes with OneRen</h5>
-                    <div class="d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
+                <div style="background-color: #F5F7FA; left: 15%; width: 70% !important;" class=" col-2 my-card-con rounded position-absolute top-100 p-1 text-center">
+                    <h5 style="font-size: 18px;">Creating Streamlined Safeguarding Processes with OneRen</h5>
+                    <div class="readmorediv d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
                         <span class="read"><a href="#" class="readmore text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a><i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
-            <div class="my-card card position-relative rounded-5 border border-0" style="width: 30%; height: 230px;">
+            <div class="my-card card position-relative rounded-5 border border-0 col-md-4" style="width: 30%; height: 230px;">
                 <img src="./Images/image 19.png" alt="" style="top: 30px;" class="w-100 position-absolute">
-                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="my-card-con rounded position-absolute top-100 p-3 text-center">
-                    <h5>What are your safeguarding responsibilities and how can you manage them?</h5>
-                    <div class="d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
+                <div style="background-color: #F5F7FA; left: 15%; width: 70% !important;" class=" col-2 my-card-con rounded position-absolute top-100 p-1 text-center">
+                    <h5 style="font-size: 18px;">What are your safeguarding responsibilities and how can you manage them?</h5>
+                    <div class="readmorediv d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
                         <span class="read"><a href="#" class="readmore text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a><i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
-            <div class="my-card card position-relative rounded-5 border border-0" style="width: 30%; height: 230px;">
+            <div class="my-card card position-relative rounded-5 border border-0 col-md-4" style="width: 30%; height: 230px;">
                 <img src="./Images/image 20.png" alt="" style="top: 30px;" class="w-100 position-absolute">
-                <div style="width: 290px; background-color: #F5F7FA; right: 25px;" class="my-card-con rounded position-absolute top-100 p-3 text-center">
-                    <h5>Revamping the Membership Model with Triathlon Australia</h5>
-                    <div class="d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
+                <div style="background-color: #F5F7FA; left: 15%; width: 70% !important;" class=" col-2 my-card-con rounded position-absolute top-100 p-1 text-center">
+                    <h5 style="font-size: 18px;">Revamping the Membership Model with Triathlon Australia</h5>
+                    <div class="readmorediv d-flex text-success align-items-center text-center justify-content-center" style="width: 200px;">
                         <spa class="read"><a href="#" class="readmore text-success mx-3 fw-bold" style="text-decoration: none;">Readmore</a><i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </div>
